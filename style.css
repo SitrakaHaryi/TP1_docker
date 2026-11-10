@@ -1,0 +1,306 @@
+/* =====================================
+   STYLE GÉNÉRAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f9;
+    color: #173b5e;
+    font-size: 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+
+/* =====================================
+   CARTES
+===================================== */
+
+.card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+    font-size: 21px;
+    color: #173b5e;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #dce5ed;
+}
+
+
+/* =====================================
+   FORMULAIRES
+===================================== */
+
+.formulaire {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.formulaire input,
+.formulaire select {
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    background-color: white;
+    color: #173b5e;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    min-width: 0;
+}
+
+.formulaire input:focus,
+.formulaire select:focus {
+    outline: none;
+    border-color: #2980b9;
+    box-shadow: 0 0 0 2px rgba(41, 128, 185, 0.1);
+}
+
+.formulaire input[type="text"] {
+    flex: 1.2;
+}
+
+.formulaire input[type="number"] {
+    flex: 1;
+}
+
+.formulaire input[type="date"] {
+    flex: 1;
+}
+
+.formulaire select {
+    flex: 1;
+}
+
+.formulaire button {
+    height: 40px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #287eae;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.formulaire button:hover {
+    background-color: #1d638d;
+}
+
+
+/* =====================================
+   FORMULAIRE ACHATS
+===================================== */
+
+.achat-form {
+    margin-bottom: 16px;
+}
+
+.achat-form input,
+.achat-form select {
+    flex: 1;
+}
+
+.achat-form button {
+    flex-basis: auto;
+}
+
+
+/* =====================================
+   TABLEAUX
+===================================== */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+}
+
+thead {
+    background-color: #eaf1f6;
+}
+
+th {
+    color: #173b5e;
+    font-weight: bold;
+    padding: 14px 12px;
+    border: 1px solid #dce5ed;
+    white-space: nowrap;
+}
+
+td {
+    padding: 13px 12px;
+    border: 1px solid #dce5ed;
+    color: #173b5e;
+    white-space: nowrap;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f8fb;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+tbody tr:hover {
+    background-color: #edf5fa;
+}
+
+
+/* =====================================
+   MONTANT TOTAL
+===================================== */
+
+.total {
+    margin-top: 20px;
+    margin-bottom: 28px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.total strong {
+    color: #173b5e;
+    font-size: 15px;
+}
+
+
+/* =====================================
+   STATUT
+===================================== */
+
+.statut {
+    display: inline-block;
+    color: #173b5e;
+    font-size: 13px;
+}
+
+
+/* =====================================
+   MESSAGES
+===================================== */
+
+.message {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.success {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.vide {
+    text-align: center;
+    color: #94a3b8;
+    padding: 20px;
+}
+
+
+/* =====================================
+   RESPONSIVE - TABLETTES
+===================================== */
+
+@media screen and (max-width: 900px) {
+
+    .container {
+        padding: 18px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .formulaire {
+        gap: 10px;
+    }
+
+    .formulaire input,
+    .formulaire select {
+        flex: 1 1 180px;
+    }
+}
+
+
+/* =====================================
+   RESPONSIVE - TÉLÉPHONES
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .formulaire {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .formulaire input,
+    .formulaire select,
+    .formulaire button {
+        width: 100%;
+        flex: none;
+        height: 42px;
+    }
+
+    table {
+        min-width: 650px;
+    }
+
+    th,
+    td {
+        padding: 11px 10px;
+    }
+}
